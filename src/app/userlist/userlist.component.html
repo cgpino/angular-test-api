@@ -1,0 +1,14 @@
+<h1>Listado de usuarios:</h1>
+
+<div *ngFor="let user of users">
+  <ul>
+    <li>
+      <h3 [routerLink]="['/users/' , user.id]">{{user.first_name}} {{user.last_name}}</h3>
+      <p><b>Email:</b> {{user.email}}</p>
+      <img mat-card-image style="width: 150px !important;" src="{{user.avatar}}" alt="{{user.first_name}}">
+      <br>
+      <a class="btn btn-primary" [routerLink]="['/users/', user.id]">Ver detalle</a>
+    </li>
+    <br>
+  </ul>
+</div>

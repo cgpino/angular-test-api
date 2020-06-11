@@ -1,0 +1,25 @@
+<h1>Detalle de usuario</h1>
+
+<h3>{{user.first_name}} {{user.last_name}}</h3>
+<p><b>Email:</b> {{user.email}}</p>
+<img mat-card-image style="width: 150px !important;" src="{{user.avatar}}" alt="{{user.first_name}}">
+
+<br>
+<div class="form-group">
+
+        <label for="formName">Nombre:</label>
+        <input type="text" class="form-control" id="formName" name="user.first_name" [(ngModel)]="user.first_name">
+        <br>
+
+        <label for="formSurname">Apellidos:</label>
+        <input type="text" class="form-control" id="formSurname" name="user.last_name" [(ngModel)]="user.last_name">
+        <br>
+
+        <label for="formEmail">Email:</label>
+        <input type="email" class="form-control" id="formEmail" name="user.email" [(ngModel)]="user.email">
+        <br>
+
+        <button (click)="doEdit()" class="btn btn-lg btn-primary btn-block">Editar</button>
+
+        <button (click)="doDelete()" class="btn btn-lg btn-danger btn-block">Eliminar</button>
+    </div>
